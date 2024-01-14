@@ -15,19 +15,19 @@ let yourInspo = []
 
 // Object Iteration
 for (let inspo in inspiration) {
-    index = randomNumber(inspiration[prop].length)
+    index = randomNumber(inspiration[inspo].length)
 
     switch(inspo) {
         case 'date':
-            yourInspo.push(`Todays date is: ${inspiration(date)}`);
+            yourInspo.push(`Todays date is: ${this.date}}`);
         case 'specialMessage':
-            yourInspo.push(`Your special message is: ${specialMessage[inspo][index]}`);
+            yourInspo.push(`Your special message is: ${inspiration[inspo][index]}`);
         case 'advice':
-            yourInspo.push(`Here is some adive, you got this: ${specialMessage[inspo[index]]}`)
+            yourInspo.push(`Here is some adive, you got this: ${inspiration[inspo[index]]}`)
         default:
             console.log('Today is just not your day, but that is okay. There is always tomorrow');
     }
 }
 
 
-//console.log(inspiration);
+console.log(yourInspo);
