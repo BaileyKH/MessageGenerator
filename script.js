@@ -1,6 +1,6 @@
 // Gets a random number 
 const randomNumber = num => {
-    Math.floor(Math.random() * num)
+    return Math.floor(Math.random() * num)
 };
 
 // Inspiration Objects
@@ -15,19 +15,30 @@ let yourInspo = []
 
 // Object Iteration
 for (let inspo in inspiration) {
-    index = randomNumber(inspiration[inspo].length)
+    let index = randomNumber(inspiration[inspo].length)
 
     switch(inspo) {
         case 'date':
-            yourInspo.push(`Todays date is: ${this.date}}`);
+            yourInspo.push(`Todays date is: ${this.date}}`)
+            break
         case 'specialMessage':
-            yourInspo.push(`Your special message is: ${inspiration[inspo][index]}`);
+            yourInspo.push(`Your special message is: ${inspiration[inspo][index]}`)
+            break
         case 'advice':
-            yourInspo.push(`Here is some adive, you got this: ${inspiration[inspo[index]]}`)
+            yourInspo.push(`Here is some adive, you got this: ${inspiration[inspo][index]}`)
+            break
         default:
-            console.log('Today is just not your day, but that is okay. There is always tomorrow');
+            yourInspo.push('Today is just not your day, but that is okay. There is always tomorrow')
+            break
     }
 }
 
+// Format Inspiration
+const formatInspo = fInspo => {
+    const format = yourInspo.join('\n')
+    console.log(format)
+};
 
-console.log(yourInspo);
+formatInspo(yourInspo);
+
+
