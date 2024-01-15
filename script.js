@@ -19,7 +19,7 @@ for (let inspo in inspiration) {
 
     switch(inspo) {
         case 'date':
-            yourInspo.push(`Todays date is: ${this.date}}`)
+            yourInspo.push(`Todays date is: ${inspiration.date}`)
             break
         case 'specialMessage':
             yourInspo.push(`Your special message is: ${inspiration[inspo][index]}`)
